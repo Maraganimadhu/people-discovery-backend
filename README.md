@@ -6,35 +6,41 @@ Tech Stack
 - MySQL
 - JWT Authentication
 - Postman (API Testing)
-Step 1: User Login
-![user login](C:\Users\Lenovo\OneDrive\Desktop\tech assign on djnago\output ss\login_png.png)
+  
+👉Step 1: User register and login 
+Endpoint: POST /auth/account/register/
+![user register](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
+![re-register](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/re-register_png.png)
 Endpoint: POST /auth/login/
+![user login](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/login_png.png)
 Use Postman to login with valid credentials.
 Response returns JWT access token.
 Screenshot: login_success.png
-Step 2: Authorization Setup
+👉Step 2: Authorization Setup
+![Authorization Setup](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
 In Postman → Authorization tab:
 Type: Bearer Token
 Token: <JWT access token>
 This token is required for all protected APIs.
-Screenshot: bearer_token_setup.png
-Step 3: Get / Create Profile
+👉Step 3: Get / Create Profile
 Endpoint: POST /profile/me/
+![create profile](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
+
 If profile does not exist, it will be created.
 Error Faced: age cannot be null.
 Fix: Provide default age or make age nullable in model.
 Screenshot: profile_500_error.png
-Step 4: Profile Fix
-Model Fix:
-age = models.IntegerField(default=18)
-Run makemigrations & migrate.
-Screenshot: profile_fixed.png
-Step 5: View Profile
+👉Step 4: View Profile
 Endpoint: GET /profile/me/
+![relogin ](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
 Returns logged-in user profile data.
 Screenshot: profile_get_success.png
-Step 6: Discover People
+👉Step 5: Discover People
 Endpoint: GET /discover/people/
+![empty reponse](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/discover_empty.png)
+![multiple respones](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/multiple users existed data.png)
+
+
 Returns list of users excluding self.
 Empty response [] means no other profiles exist.
 Screenshot: discover_people_empty.png
