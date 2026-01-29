@@ -53,3 +53,17 @@ Common Issues
 - Database constraint issues (age null)
 Conclusion
 All APIs work correctly after profile model fix and valid authentication. Screenshots above show each step execution order.
+
+Interaction API
+
+The Interaction module allows users to express interest or skip other users.
+All interaction APIs are JWT protected.
+Endpoint: POST /interactions/
+![intraction](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/intraction_saved.png)
+![re-intraction](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/re-intraction.png)
+
+Business Rules Enforced
+- A user cannot interact with themselves
+- A user cannot interact with the same person twice
+- Every interaction is stored in the database
+- Only authenticated users can perform interactions
