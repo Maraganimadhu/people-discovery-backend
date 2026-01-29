@@ -16,31 +16,32 @@ Endpoint: POST /auth/login/
 Use Postman to login with valid credentials.
 Response returns JWT access token.
 Screenshot: login_success.png
+
 👉Step 2: Authorization Setup
 ![Authorization Setup](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/Authorization_Setup.png)
 In Postman → Authorization tab:
 Type: Bearer Token
 Token: <JWT access token>
 This token is required for all protected APIs.
+
 👉Step 3: Get / Create Profile
 Endpoint: POST /profile/me/
 ![create profile](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
-
 If profile does not exist, it will be created.
 Error Faced: age cannot be null.
 Fix: Provide default age or make age nullable in model.
 Screenshot: profile_500_error.png
+
 👉Step 4: View Profile
 Endpoint: GET /profile/me/
 ![get profile ](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/get_profile.png)
 Returns logged-in user profile data.
 Screenshot: profile_get_success.png
+
 👉Step 5: Discover People
 Endpoint: GET /discover/people/
-![empty reponse](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/discover_empty.png)
+![empty reponse](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/discover_empty.png.png)
 ![multiple respones](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/multiple_users_existed_data.png)
-
-
 Returns list of users excluding self.
 Empty response [] means no other profiles exist.
 Screenshot: discover_people_empty.png
