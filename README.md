@@ -17,7 +17,7 @@ Use Postman to login with valid credentials.
 Response returns JWT access token.
 Screenshot: login_success.png
 👉Step 2: Authorization Setup
-![Authorization Setup](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
+![Authorization Setup](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/Authorization_Setup.png)
 In Postman → Authorization tab:
 Type: Bearer Token
 Token: <JWT access token>
@@ -32,13 +32,13 @@ Fix: Provide default age or make age nullable in model.
 Screenshot: profile_500_error.png
 👉Step 4: View Profile
 Endpoint: GET /profile/me/
-![relogin ](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/register_png.png)
+![get profile ](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/get_profile.png)
 Returns logged-in user profile data.
 Screenshot: profile_get_success.png
 👉Step 5: Discover People
 Endpoint: GET /discover/people/
 ![empty reponse](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/discover_empty.png)
-![multiple respones](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/multiple users existed data.png)
+![multiple respones](https://github.com/Maraganimadhu/people-discovery-backend/blob/main/output%20ss/multiple_users_existed_data.png)
 
 
 Returns list of users excluding self.
