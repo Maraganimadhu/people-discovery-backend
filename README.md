@@ -54,7 +54,7 @@ Common Issues
 Conclusion
 All APIs work correctly after profile model fix and valid authentication. Screenshots above show each step execution order.
 
-Interaction API
+👉Step 6: Interaction API
 
 The Interaction module allows users to express interest or skip other users.
 All interaction APIs are JWT protected.
